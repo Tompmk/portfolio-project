@@ -1,10 +1,12 @@
 import React from "react";
 import Home from "@/components/Home/Home";
 
-const HomePage: React.FC = () => {
-  return <div className="text-5xl">
-    <Home />
-  </div>;
-}
+const HomePage = () => {
+  return (
+    <div>
+      <Home />
+    </div>
+  );
+};
 
 export default HomePage;

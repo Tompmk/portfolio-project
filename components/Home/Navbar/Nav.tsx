@@ -1,7 +1,7 @@
 'use client';
 
-import React from "react";
-import Image from 'next/image';
+import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { navLinks } from "@/constant/constant";
 import Logo  from '@/public/images/logo.png';
@@ -10,20 +10,38 @@ import { HiBars3BottomRight } from "react-icons/hi2";
 // define props type
 
 type Props = {
-    openNav?: () => void;
-}
+    openNav: () => void;
+};
 
 const Nav = ({ openNav }: Props) => {
 
-    
+    const [navBg, setNavBg] = useState(false);
 
+    useEffect(() => {
+        const handler = () => {
+            if (window.scrollY >= 90) {
+                setNavBg(true);
+            } if (window.scrollY < 90) {
+                setNavBg(false);
+            }
+        };
+
+        window.addEventListener("scroll", handler);
+
+        return () => {
+            window.removeEventListener("scroll", handler);
+        };
+    
+    }, []);
     return (
-        <div className="flexd h-[12vh] z-[10] bg-blue-950 w-full">
-            <div className="flex items-center justify-between h-full w-[95%] sm:w-[80%] xl:w-[95%] mx-auto">
+        <div className={`flexd ${
+            navBg ? "bg-[#240b39]" : "flexd"
+            } h-[12vh] z-[10] w-full transition-all duration-200`}>
+            <div className="flex items-center justify-between h-full w-[95%] sm:w-[90%] xl:w-[95%] mx-auto">
                 {/* Logo */}
                 <Image
                     src={Logo}
-                    alt="LOGO"
+                    alt="LOGO" 
                     width={170}
                     height={170}
                     className="ml-[-1.5rem] sm:ml-0"
@@ -52,7 +70,10 @@ const Nav = ({ openNav }: Props) => {
                 </div>
             </div>
         </div>
+
     );
 };
+
+
 
 export default Nav;

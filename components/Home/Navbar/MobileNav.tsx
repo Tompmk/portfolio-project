@@ -23,12 +23,12 @@ const MobileNav = ({ showNav, closeNav }: Props) => {
                         {navLinks.map((navlink) => {
                         return (
                             <Link key={navlink.id} href={navlink.url}>
-                                <p className="nav__link text-[20px] ml-12 border-b-[1.5px] pb-2 border-white sm:text-[30px]">{navlink.label}</p>
+                                <p className="nav__link text-[20px] ml-10 border-b-[1.5px] pb-2 border-white sm:text-[30px]">{navlink.label}</p>
                             </Link>
                         );
                         })}
                 {/* Close Button */}
-                <CgClose onClick={closeNav} className="absolute top-[0.7rem] right-[1.4rem] sm:w-8 sm:h-8 w-6 h-6 text-w" />
+                <CgClose onClick={closeNav} className="absolute top-[0.4rem] right-[1.2rem] sm:w-8 sm:h-8 w-6 h-6 text-w" />
             </div>
         </div>
     );
