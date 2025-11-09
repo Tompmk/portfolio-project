@@ -19,7 +19,7 @@ const Hero = () => {
                         <p data-aos="fade-left" data-aos-delay="200" className="mt-6 text-sm md:text-base text-white text-opacity-60">{BaseInfo.description}</p>
                         {/* Button */}
                         <button data-aos="zoom-in" data-aos-delay="300" className="md:px-8 md:py-2.5 px-6 py-1.5 text-white font-semibold text-sm md-text-lg transition-all duration-200 rounded-lg mt-8 bg-blue-700 hover:bg-blue-900 flex items-center space-x-2">
-                            <span> Download CV </span>
+                            <span> <a href="https://drive.google.com/file/d/1pSYFgYsMd6dx8Yh5AK0egENBjJr5rPB_/view?usp=sharing" target="_blank">Download CV</a> </span>
                             <FaDownload />
                         </button>
                     </div>

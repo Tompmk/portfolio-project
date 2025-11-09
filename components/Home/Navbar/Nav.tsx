@@ -15,7 +15,7 @@ type Props = {
 
 const Nav = ({ openNav }: Props) => {
 
-    const [navBg, setNavBg] = useState(false);
+    const [navBg, setNavBg] = useState(false)
 
     useEffect(() => {
         const handler = () => {
@@ -30,18 +30,18 @@ const Nav = ({ openNav }: Props) => {
 
         return () => {
             window.removeEventListener("scroll", handler);
-        };
+        }
     
     }, []);
     return (
-        <div className={`flexd ${
-            navBg ? "bg-[#240b39]" : "flexd"
+        <div className={`fixed ${
+            navBg ? "bg-[#240b39]" : "fixed"
             } h-[12vh] z-[10] w-full transition-all duration-200`}>
             <div className="flex items-center justify-between h-full w-[95%] sm:w-[90%] xl:w-[95%] mx-auto">
                 {/* Logo */}
                 <Image
                     src={Logo}
-                    alt="LOGO" 
+                    alt="Logo"
                     width={170}
                     height={170}
                     className="ml-[-1.5rem] sm:ml-0"
@@ -60,10 +60,10 @@ const Nav = ({ openNav }: Props) => {
                     </div>
                     {/* Button */}
                     <div className="flex items-center space-x-4">
-                        <button className="md:px-10 md:py-3 px-8 py-3 text-blue-800 font-semibold sm:text-base text-sm bg-white
+                        {/* <button className="md:px-10 md:py-3 px-8 py-3 text-blue-800 font-semibold sm:text-base text-sm bg-white
                         hover:bg-gray-200 transition-all duration-200 rounded-lg">
                             Hire Me
-                        </button>
+                        </button> */}
                     </div>
                     {/* Burger */}
                     <HiBars3BottomRight onClick={openNav} className="w-8 h-8 cursor-pointer text-white lg:hidden" />
