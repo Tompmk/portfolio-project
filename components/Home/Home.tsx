@@ -21,7 +21,7 @@ const Home = () => {
                 duration: 1000,
                 easing: "ease",
                 once: true,
-                anchorPlacment:"top-bottom",
+                anchorPlacement: "top-bottom",
             });
         };
 

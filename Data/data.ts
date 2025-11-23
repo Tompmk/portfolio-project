@@ -72,11 +72,11 @@ export const servicesData = [
 ];
 
 export const projectData = [
-  // {
-  //   id: 1,
-  //   image: "/images/p1.png",
-  //   url: "https://agency-opal-eight.vercel.app/",
-  // },
+  {
+    id: 1,
+    image: "/images/p1.png",
+    url: "#",
+  },
   // {
   //   id: 2,
   //   image: "/images/p2.png",
@@ -119,7 +119,7 @@ export const skillsData = [
     id: 1,
     title: "React",
     image: "/images/react.svg",
-    percent: "80%",
+    percent: "75%",
   },
   {
     id: 2,
